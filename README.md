@@ -1,21 +1,21 @@
-# CricIQ - Your AI Cricket Buddy 🏏
+# CricIQ - Your AI Cricket Buddy
 
 Welcome to the beta onboarding platform for **CricIQ**, the ultimate AI-powered companion designed for cricket enthusiasts and players who want to elevate their game.
 
 ---
 
-## 👋 Who We Are
+## Who We Are
 
 We are a team of tech and cricket passionate innovators building **CricIQ**—an intelligent mobile application that brings advanced AI analysis, real-time insights, and interactive cricket data tracking right to your pocket. Whether you want to measure your bowling speed, analyze pitch maps, or study ball trajectories, CricIQ is built to be your personal digital coach.
 
 ---
 
-## 🚀 Core Features
+## Features
 
-* **AI Speed Radar:** Track and measure your bowling speed accurately using just your smartphone camera.
-* **Smart Pitch Mapping:** Visualize your line, length, and pitching consistency seamlessly.
-* **Trajectory Tracking:** Analyze the flight, swing, and dip of the ball to refine your technique.
-* **Tailored Insights:** Custom breakdown of your cricket performance powered by smart analytics.
+* **Ball Speed :** Track and measure your bowling speed accurately using just your smartphone camera.
+* **Pitch Map:** Visualize your line, length, and pitching consistency seamlessly.
+* **3D Trajectory:** Analyze the flight, swing, and dip of the ball to refine your technique.
+* **AI Insights:** Custom breakdown of your cricket performance powered by smart analytics.
 
 ---
 
