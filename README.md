@@ -1,73 +1,30 @@
-# React + TypeScript + Vite
+# CricIQ - Your AI Cricket Buddy 🏏
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the beta onboarding platform for **CricIQ**, the ultimate AI-powered companion designed for cricket enthusiasts and players who want to elevate their game.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 👋 Who We Are
 
-## React Compiler
+We are a team of tech and cricket passionate innovators building **CricIQ**—an intelligent mobile application that brings advanced AI analysis, real-time insights, and interactive cricket data tracking right to your pocket. Whether you want to measure your bowling speed, analyze pitch maps, or study ball trajectories, CricIQ is built to be your personal digital coach.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Core Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **AI Speed Radar:** Track and measure your bowling speed accurately using just your smartphone camera.
+* **Smart Pitch Mapping:** Visualize your line, length, and pitching consistency seamlessly.
+* **Trajectory Tracking:** Analyze the flight, swing, and dip of the ball to refine your technique.
+* **Tailored Insights:** Custom breakdown of your cricket performance powered by smart analytics.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📲 Download the App (Beta)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Our app is officially live for beta testing! Based on your device, you can install the application from the official stores using the links below:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* **Android Users:** [Download CricIQ on Google Play Store](https://play.google.com/store/apps/details?id=com.sportzengage.criciq)
+* **iOS Users:** [Download CricIQ on Apple App Store](https://apps.apple.com/in/app/criciq-your-ai-cricket-buddy/id6759147049)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+© 2026 CricIQ. All rights reserved.
