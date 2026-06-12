@@ -19,7 +19,7 @@ We are a team of tech and cricket passionate innovators building **CricIQ**—an
 
 ---
 
-## 📲 Download the App (Beta)
+## Download the App (Beta)
 
 Our app is officially live for beta testing! Based on your device, you can install the application from the official stores using the links below:
 
