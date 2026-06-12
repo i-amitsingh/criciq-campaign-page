@@ -83,7 +83,7 @@ function detectPlatform(): "ios" | "android" | "unknown" {
   return "unknown";
 }
 
-// Replace these with your actual store URLs
+// Store URLs for Redirection
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.sportzengage.criciq";
 const APP_STORE_URL =
@@ -105,21 +105,62 @@ const HeroSlide: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
 
-    const platform = detectPlatform();
+    // Country code ko Google Form ke expected format ("IN +91", "SG +65") me convert kar rahe hain
+    const selectedCountryObj = countryCodes.find((c) => c.code === countryCode);
+    const formattedCountryCode = selectedCountryObj
+      ? `${selectedCountryObj.country} ${selectedCountryObj.code}`
+      : "IN +91";
 
-    setTimeout(() => {
+    console.log("Submitting Verified Data:", {
+      name,
+      age,
+      state,
+      formattedCountryCode,
+      phone,
+    });
+
+    const formData = new FormData();
+    formData.append("entry.802289510", name);
+    formData.append("entry.397412993", age); // BetaForm se valid hyphen wala age group milega
+    formData.append("entry.241358872", state);
+    formData.append("entry.865962799", formattedCountryCode);
+    formData.append("entry.251313540", phone);
+
+    try {
+      // Aapka actual google form submission URL
+      await fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSe3iqKwmxmFVDPlx13V0xHS_LkfKYziQ6j5V5rJWTC6QUYeOQ/formResponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: formData,
+        },
+      );
+
+      // Form successfully sent to Google sheets
+      setSubmitted(true);
+
+      // ── Dynamic Store Redirection Logic ──
+      const platform = detectPlatform();
+      let targetUrl = PLAY_STORE_URL; // Default fallback for Android & Desktop
+
       if (platform === "ios") {
-        window.location.href = APP_STORE_URL;
-      } else if (platform === "android") {
-        window.location.href = PLAY_STORE_URL;
-      } else {
-        window.open(PLAY_STORE_URL, "_blank");
+        targetUrl = APP_STORE_URL;
       }
-    }, 1200);
+
+      console.log(`Redirecting to ${platform} store:`, targetUrl);
+
+      // 1.5 seconds ka buffer delay taaki user green/success animation dekh sake
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 1500);
+
+    } catch (err) {
+      console.error("Fetch error:", err);
+    }
   };
 
   return (

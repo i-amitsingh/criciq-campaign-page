@@ -80,9 +80,9 @@ const BetaForm: React.FC<BetaFormProps> = ({
             >
               <option value="">Age</option>
               <option>Under 10</option>
-              <option>10–20</option>
-              <option>21–30</option>
-              <option>31–40</option>
+              <option>10-20</option>
+              <option>21-30</option>
+              <option>31-40</option>
               <option>40+</option>
             </select>
           </div>
